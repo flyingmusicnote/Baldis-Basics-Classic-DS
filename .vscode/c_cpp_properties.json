@@ -1,0 +1,50 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "/home/aaron/Desktop/dsprojects/aaron_engine/**",
+                "/home/aaron/Desktop/dsprojects/aaron_engine/build/aaron_engine/data",
+                "/home/aaron/Desktop/dsprojects/aaron_engine/build/aaron_engine/graphics",
+                "/opt/blocksds/**",
+                "/opt/blocksds/external/nitro-engine/include"
+            ],
+            "defines": [
+                "ARM9",
+                "__NDS__"
+            ],
+            "compilerPath": "/opt/wonderful/toolchain/gcc-arm-none-eabi/bin/arm-none-eabi-gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "mergeConfigurations": false,
+            "recursiveIncludes": {},
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true
+            }
+        },
+        {
+            "name": "Win32",
+            "includePath": [
+                "c:/Users/a/Desktop/dsprojects/aaron_engine/**",
+                "C:/msys64/opt/wonderful/thirdparty/blocksds/**",
+                "C:\\msys64\\opt\\wonderful\\thirdparty\\blocksds\\external\\nitro-engine\\include"
+            ],
+            "defines": [
+                "ARM9",
+                "__NDS__"
+            ],
+            "windowsSdkVersion": "10.0.26100.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64",
+            "mergeConfigurations": false,
+            "recursiveIncludes": {},
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,15 @@
+#ifndef draw_h
+#define draw_h
+
+#include "NEMain.h"
+#include "scene.h"
+
+class draw_class {
+    public:
+        void DrawModel(NE_Model* Model, int x, int y, int z, int rx, int ry, int rz, float size);
+        void DrawQuad(NE_Material* Material, int x, int y, int z, int rx, int ry, int rz, float size);
+};
+
+extern draw_class draw; // extern means scripts only have to define the .h to get the class
+
+#endif

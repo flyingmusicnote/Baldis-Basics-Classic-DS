@@ -80,7 +80,7 @@ build/aaron_engine/source/draw.cpp.o: source/draw.cpp \
  /opt/blocksds/external/nitro-engine/include/NEPhysics.h \
  /opt/blocksds/external/nitro-engine/include/NERichText.h \
  /opt/blocksds/external/nitro-engine/include/NEText.h \
- source/headers/scene.h
+ source/headers/scene.h source/headers/camera.h
 source/headers/draw.h:
 /opt/blocksds/external/nitro-engine/include/NEMain.h:
 /opt/blocksds/core/libs/libnds/include/nds.h:
@@ -163,3 +163,4 @@ source/headers/draw.h:
 /opt/blocksds/external/nitro-engine/include/NERichText.h:
 /opt/blocksds/external/nitro-engine/include/NEText.h:
 source/headers/scene.h:
+source/headers/camera.h:

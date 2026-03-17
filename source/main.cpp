@@ -39,15 +39,39 @@ void Draw3DScene(void* arg) // a reminder that this function is called every fra
 
     //draw.DrawModel(Scene->MarioModel, 0,0,0, 0,0,0, 1);
 
-    draw.DrawQuad(Scene->WallMaterial, 0,0,0, 0,90,0, 2);
+    draw.DrawQuad(Scene->WallMaterial, 0,0,73728, 0,-180,0, 2);
+    draw.DrawQuad(Scene->WallMaterial, -8192,0,0, 0,90,0, 2);
+    draw.DrawQuad(Scene->CeilingMaterial, 0,8192,0, 90,0,0, 2);
+    draw.DrawQuad(Scene->FloorMaterial, 0,-8192,0, -90,0,0, 2);
+    draw.DrawQuad(Scene->WallMaterial, 8192,0,0, 0,-90,0, 2);
+    draw.DrawQuad(Scene->FloorMaterial, 0,-8192,65536, -90,0,0, 2);
+    draw.DrawQuad(Scene->FloorMaterial, 0,-8192,16384, -90,0,0, 2);
+    draw.DrawQuad(Scene->WallMaterial, 8192,0,16384, 0,-90,0, 2);
+    draw.DrawQuad(Scene->WallMaterial, -8192,0,16384, 0,90,0, 2);
+    draw.DrawQuad(Scene->CeilingMaterial, 0,8192,16384, 90,0,0, 2);
+    draw.DrawQuad(Scene->CeilingMaterial, 0,8192,65536, 90,0,0, 2);
+    draw.DrawQuad(Scene->FloorMaterial, 0,-8192,32768, -90,0,0, 2);
+    draw.DrawQuad(Scene->WallMaterial, 8192,0,32768, 0,-90,0, 2);
+    draw.DrawQuad(Scene->WallMaterial, -8192,0,32768, 0,90,0, 2);
+    draw.DrawQuad(Scene->CeilingMaterial, 0,8192,32768, 90,0,0, 2);
+    draw.DrawQuad(Scene->WallMaterial, -8192,0,65536, 0,90,0, 2);
+    draw.DrawQuad(Scene->FloorMaterial, 0,-8192,49152, -90,0,0, 2);
+    draw.DrawQuad(Scene->WallMaterial, 8192,0,49152, 0,-90,0, 2);
+    draw.DrawQuad(Scene->WallMaterial, -8192,0,49152, 0,90,0, 2);
+    draw.DrawQuad(Scene->CeilingMaterial, 0,8192,49152, 90,0,0, 2);
+    draw.DrawQuad(Scene->FloorMaterial, 16384,-8192,65536, -90,0,0, 2);
+    draw.DrawQuad(Scene->WallMaterial, 16384,0,73728, 0,-180,0, 2);
+    draw.DrawQuad(Scene->CeilingMaterial, 16384,8192,65536, 90,0,0, 2);
+    draw.DrawQuad(Scene->WallMaterial, 16384,0,57344, 0,0,0, 2);
+    draw.DrawQuad(Scene->FloorMaterial, 32768,-8192,65536, -90,0,0, 2);
+    draw.DrawQuad(Scene->WallMaterial, 32768,0,73728, 0,-180,0, 2);
+    draw.DrawQuad(Scene->CeilingMaterial, 32768,8192,65536, 90,0,0, 2);
+    draw.DrawQuad(Scene->WallMaterial, 32768,0,57344, 0,0,0, 2);
+    draw.DrawQuad(Scene->WallMaterial, 49152,0,57344, 0,0,0, 2);
+    draw.DrawQuad(Scene->CeilingMaterial, 49152,8192,65536, 90,0,0, 2);
+    draw.DrawQuad(Scene->WallMaterial, 49152,0,73728, 0,-180,0, 2);
+    draw.DrawQuad(Scene->FloorMaterial, 49152,-8192,65536, -90,0,0, 2);
 
-    draw.DrawQuad(Scene->WallMaterial, 4,0,0, 0,-90,0, 2);
-
-    draw.DrawQuad(Scene->CeilingMaterial, 2,2,0, 90,0,0, 2);
-
-    draw.DrawQuad(Scene->FloorMaterial, 2,-2,0, -90,0,0, 2);
-
-    printf("\x1b[13;0HTRI: %d", NE_GetPolygonCount());
 }
 
 int main(int argc, char *argv[])
@@ -60,7 +84,7 @@ int main(int argc, char *argv[])
     irqEnable(IRQ_HBLANK);
     irqSet(IRQ_VBLANK, NE_VBLFunc);
     irqSet(IRQ_HBLANK, NE_HBLFunc);
-
+    
     NE_Init3D(); // Init Nitro Engine in normal 3D mode
 
     // libnds uses VRAM_C for the text console, reserve A and B only
@@ -123,6 +147,7 @@ int main(int argc, char *argv[])
     {
         
         NE_WaitForVBL((NE_UpdateFlags)0); // Wait for next frame
+        NE_ClearColorSet(RGB15(5, 25, 31), 31, 0);
 
         debug.GetFPS();
 

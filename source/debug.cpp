@@ -30,5 +30,5 @@ void debug_class::DebugInit() {
 
 void debug_class::FramePassed() {
     fpscount++;
-    printf("\x1b[11;0HCPU: %d", NE_GetCPUPercent());
+    printf("\x1b[11;0HCPU: %u%%", NE_GetCPUPercent());
 }

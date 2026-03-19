@@ -1,4 +1,4 @@
-#include "headers/debug.h"
+#include "headers/Debug.h"
 #include <NEMain.h>
 #include <time.h>
 

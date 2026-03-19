@@ -1,5 +1,5 @@
-#include "headers/player.h"
-#include "headers/camera.h" // camera class is an extern so we get the class automatically
+#include "headers/PlayerHandler.h"
+#include "headers/Camera.h" // camera class is an extern so we get the class automatically
 #include <NEMain.h> // This is for the uint32_t type
 
 float moveSpeed = 0.1f;

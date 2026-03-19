@@ -1,5 +1,5 @@
-#ifndef debug_h
-#define debug_h
+#ifndef Debug_h
+#define Debug_h
 
 class debug_class {
     public:

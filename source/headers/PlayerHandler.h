@@ -1,5 +1,5 @@
-#ifndef player_h
-#define player_h
+#ifndef PlayerHandler_h
+#define PlayerHandler_h
 
 #include <NEMain.h> // This is for the uint32_t type
 

@@ -1,5 +1,5 @@
-build/aaron_engine/source/draw.cpp.o: source/draw.cpp \
- source/headers/draw.h \
+build/aaron_engine/source/Mapdata.cpp.o: source/Mapdata.cpp \
+ source/headers/Mapdata.h source/headers/SceneData.h \
  /opt/blocksds/external/nitro-engine/include/NEMain.h \
  /opt/blocksds/core/libs/libnds/include/nds.h \
  /opt/blocksds/core/libs/libnds/include/nds/bios.h \
@@ -80,8 +80,9 @@ build/aaron_engine/source/draw.cpp.o: source/draw.cpp \
  /opt/blocksds/external/nitro-engine/include/NEPhysics.h \
  /opt/blocksds/external/nitro-engine/include/NERichText.h \
  /opt/blocksds/external/nitro-engine/include/NEText.h \
- source/headers/scene.h source/headers/camera.h
-source/headers/draw.h:
+ source/headers/Draw3D.h
+source/headers/Mapdata.h:
+source/headers/SceneData.h:
 /opt/blocksds/external/nitro-engine/include/NEMain.h:
 /opt/blocksds/core/libs/libnds/include/nds.h:
 /opt/blocksds/core/libs/libnds/include/nds/bios.h:
@@ -162,5 +163,4 @@ source/headers/draw.h:
 /opt/blocksds/external/nitro-engine/include/NEPhysics.h:
 /opt/blocksds/external/nitro-engine/include/NERichText.h:
 /opt/blocksds/external/nitro-engine/include/NEText.h:
-source/headers/scene.h:
-source/headers/camera.h:
+source/headers/Draw3D.h:

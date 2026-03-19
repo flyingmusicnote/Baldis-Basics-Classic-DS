@@ -1,5 +1,5 @@
-build/aaron_engine/source/player.cpp.o: source/player.cpp \
- source/headers/player.h \
+build/aaron_engine/source/InitElements.cpp.o: source/InitElements.cpp \
+ source/headers/InitElements.h source/headers/SceneData.h \
  /opt/blocksds/external/nitro-engine/include/NEMain.h \
  /opt/blocksds/core/libs/libnds/include/nds.h \
  /opt/blocksds/core/libs/libnds/include/nds/bios.h \
@@ -80,8 +80,13 @@ build/aaron_engine/source/player.cpp.o: source/player.cpp \
  /opt/blocksds/external/nitro-engine/include/NEPhysics.h \
  /opt/blocksds/external/nitro-engine/include/NERichText.h \
  /opt/blocksds/external/nitro-engine/include/NEText.h \
- source/headers/camera.h
-source/headers/player.h:
+ source/headers/SceneData.h build/aaron_engine/data/mario_bin.h \
+ build/aaron_engine/graphics/mario.h \
+ build/aaron_engine/graphics/Walls/WhiteBrickWall.h \
+ build/aaron_engine/graphics/Floor/TileFloor.h \
+ build/aaron_engine/graphics/Ceiling/Ceiling.h
+source/headers/InitElements.h:
+source/headers/SceneData.h:
 /opt/blocksds/external/nitro-engine/include/NEMain.h:
 /opt/blocksds/core/libs/libnds/include/nds.h:
 /opt/blocksds/core/libs/libnds/include/nds/bios.h:
@@ -162,4 +167,9 @@ source/headers/player.h:
 /opt/blocksds/external/nitro-engine/include/NEPhysics.h:
 /opt/blocksds/external/nitro-engine/include/NERichText.h:
 /opt/blocksds/external/nitro-engine/include/NEText.h:
-source/headers/camera.h:
+source/headers/SceneData.h:
+build/aaron_engine/data/mario_bin.h:
+build/aaron_engine/graphics/mario.h:
+build/aaron_engine/graphics/Walls/WhiteBrickWall.h:
+build/aaron_engine/graphics/Floor/TileFloor.h:
+build/aaron_engine/graphics/Ceiling/Ceiling.h:

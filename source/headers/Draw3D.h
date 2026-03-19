@@ -1,8 +1,8 @@
-#ifndef draw_h
-#define draw_h
+#ifndef Draw3D_h
+#define Draw3D_h
 
 #include "NEMain.h"
-#include "scene.h"
+#include "SceneData.h"
 
 class draw_class {
     public:

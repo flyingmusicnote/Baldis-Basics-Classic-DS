@@ -1,4 +1,5 @@
-build/aaron_engine/source/main.cpp.o: source/main.cpp \
+build/aaron_engine/source/Draw3D.cpp.o: source/Draw3D.cpp \
+ source/headers/Draw3D.h \
  /opt/blocksds/external/nitro-engine/include/NEMain.h \
  /opt/blocksds/core/libs/libnds/include/nds.h \
  /opt/blocksds/core/libs/libnds/include/nds/bios.h \
@@ -79,11 +80,8 @@ build/aaron_engine/source/main.cpp.o: source/main.cpp \
  /opt/blocksds/external/nitro-engine/include/NEPhysics.h \
  /opt/blocksds/external/nitro-engine/include/NERichText.h \
  /opt/blocksds/external/nitro-engine/include/NEText.h \
- /opt/blocksds/core/libs/maxmod/include/maxmod9.h \
- /opt/blocksds/core/libs/maxmod/include/mm_types.h source/headers/Debug.h \
- source/headers/PlayerHandler.h source/headers/Camera.h \
- source/headers/SceneData.h source/headers/Mapdata.h \
- source/headers/SceneData.h source/headers/InitElements.h
+ source/headers/SceneData.h source/headers/Camera.h
+source/headers/Draw3D.h:
 /opt/blocksds/external/nitro-engine/include/NEMain.h:
 /opt/blocksds/core/libs/libnds/include/nds.h:
 /opt/blocksds/core/libs/libnds/include/nds/bios.h:
@@ -164,12 +162,5 @@ build/aaron_engine/source/main.cpp.o: source/main.cpp \
 /opt/blocksds/external/nitro-engine/include/NEPhysics.h:
 /opt/blocksds/external/nitro-engine/include/NERichText.h:
 /opt/blocksds/external/nitro-engine/include/NEText.h:
-/opt/blocksds/core/libs/maxmod/include/maxmod9.h:
-/opt/blocksds/core/libs/maxmod/include/mm_types.h:
-source/headers/Debug.h:
-source/headers/PlayerHandler.h:
+source/headers/SceneData.h:
 source/headers/Camera.h:
-source/headers/SceneData.h:
-source/headers/Mapdata.h:
-source/headers/SceneData.h:
-source/headers/InitElements.h:

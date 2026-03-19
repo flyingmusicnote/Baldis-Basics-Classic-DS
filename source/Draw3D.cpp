@@ -1,24 +1,19 @@
-#include "headers/draw.h"
-#include "headers/camera.h"
+#include "headers/Draw3D.h"
+#include "headers/Camera.h"
 
 #include "NEMain.h"
 
 #include <cmath>
 
-draw_class draw; // this is for the extern to make model global
-
 int distance_check(int x, int y, int z, int dist) {
-    // change you chatgpt for this distance code i suckz
     int dx = x - camera.camX;
     int dy = y - camera.camY;
     int dz = z - camera.camZ;
 
-    // squared distance (still in f32 space!)
     long long distSq = (long long)dx * dx +
                        (long long)dy * dy +
                        (long long)dz * dz;
 
-    // convert dist to f32 BEFORE squaring
     int dist_f32 = dist << 12; // dist * 4096
     long long distSqLimit = (long long)dist_f32 * dist_f32;
 
@@ -41,7 +36,6 @@ void draw_class::DrawModel(NE_Model* Model, int x, int y, int z, int rx, int ry,
     glRotateZ(rz);
     glScalef32(inttof32(size), inttof32(size), inttof32(size));
 
-    // Draw Mario model
     NE_ModelDraw(Model);
 
     glPopMatrix(1);
@@ -56,7 +50,7 @@ void draw_class::DrawQuad(NE_Material* Material, int x, int y, int z, int rx, in
     // (int) tile w, tile h [optional]
 
     if (distance_check(x, y, z, 50)) return;
-    size += 0.003f;
+    size += 0.003f; // this is to hopefully remove the gaps between quads
 
     glPushMatrix();
     glTranslatef32(x, y, z);
@@ -90,3 +84,5 @@ void draw_class::DrawQuad(NE_Material* Material, int x, int y, int z, int rx, in
     NE_PolyEnd();
     glPopMatrix(1);
 }
+
+draw_class draw;

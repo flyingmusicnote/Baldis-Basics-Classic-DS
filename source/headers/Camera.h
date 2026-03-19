@@ -1,5 +1,5 @@
-#ifndef camera_h
-#define camera_h
+#ifndef Camera_h
+#define Camera_h
 
 class camera_class {
     public:

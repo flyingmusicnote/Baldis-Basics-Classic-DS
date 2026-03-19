@@ -1,7 +1,5 @@
-#include "headers/camera.h"
+#include "headers/Camera.h"
 #include <math.h>
-
-camera_class camera;
 
 void camera_class::CameraInit() {
     camX = 0;
@@ -25,3 +23,5 @@ void camera_class::GetLookVector() {
     lookY = camY + sinf(camPitch);
     lookZ = camZ + cosf(camPitch) * cosf(camYaw);
 }
+
+camera_class camera;

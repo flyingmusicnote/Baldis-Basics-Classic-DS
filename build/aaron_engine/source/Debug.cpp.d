@@ -1,5 +1,5 @@
-build/aaron_engine/source/debug.cpp.o: source/debug.cpp \
- source/headers/debug.h \
+build/aaron_engine/source/Debug.cpp.o: source/Debug.cpp \
+ source/headers/Debug.h \
  /opt/blocksds/external/nitro-engine/include/NEMain.h \
  /opt/blocksds/core/libs/libnds/include/nds.h \
  /opt/blocksds/core/libs/libnds/include/nds/bios.h \
@@ -80,7 +80,7 @@ build/aaron_engine/source/debug.cpp.o: source/debug.cpp \
  /opt/blocksds/external/nitro-engine/include/NEPhysics.h \
  /opt/blocksds/external/nitro-engine/include/NERichText.h \
  /opt/blocksds/external/nitro-engine/include/NEText.h
-source/headers/debug.h:
+source/headers/Debug.h:
 /opt/blocksds/external/nitro-engine/include/NEMain.h:
 /opt/blocksds/core/libs/libnds/include/nds.h:
 /opt/blocksds/core/libs/libnds/include/nds/bios.h:

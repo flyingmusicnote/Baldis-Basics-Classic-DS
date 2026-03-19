@@ -39,7 +39,7 @@ void Draw3DScene(void* arg) // a reminder that this function is called every fra
 
     //draw.DrawModel(Scene->MarioModel, 0,0,0, 0,0,0, 1);
 
-    draw.DrawQuad(Scene->WallMaterial, 0,0,73728, 0,-180,0, 2, 2, 2);
+    draw.DrawQuad(Scene->WallMaterial, 0,0,73728, 0,-180,0, 2);
     draw.DrawQuad(Scene->WallMaterial, -8192,0,0, 0,90,0, 2);
     draw.DrawQuad(Scene->CeilingMaterial, 0,8192,0, 90,0,0, 2);
     draw.DrawQuad(Scene->FloorMaterial, 0,-8192,0, -90,0,0, 2);

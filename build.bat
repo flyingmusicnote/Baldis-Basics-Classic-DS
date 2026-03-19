@@ -14,5 +14,5 @@ echo %BATCH_PATH% > C:\msys64\home\%USERNAME%\path.txt
 cd C:\msys64\opt\wonderful
 
 echo -- Run command
-wonderful_shell.cmd -no-start -shell bash -c "echo === GETTING PATH === && PTH=$(cat path.txt) && cd $PTH && chmod +x bash.sh && ./bash.sh"
+wonderful_shell.cmd -no-start -shell bash -c "echo === GETTING PATH === && PTH=$(cat path.txt) && cd $PTH && chmod +x -bash.sh && ./-bash.sh"
 pause

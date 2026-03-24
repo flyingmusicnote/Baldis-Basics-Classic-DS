@@ -15,6 +15,8 @@
 #include "headers/Mapdata.h" // Get map data
 #include "headers/InitElements.h" // Init textures
 
+#include "nintendo.h"
+
 // Classes
 player_class player;
 debug_class debug;
@@ -29,8 +31,7 @@ void Draw3DScene(void* arg) // a reminder that this function is called every fra
     mapdata.createMap(Scene);
 }
 
-int main(int argc, char *argv[])
-{
+SceneData haeoj() {
     camera.CameraInit();
 
     SceneData Scene = { 0 };
@@ -53,11 +54,34 @@ int main(int argc, char *argv[])
     init.textures(Scene);
 
     NE_LightSet(0, NE_White, 0, 0, 0); // We set up a light and its color
+    return Scene;
+}
+
+void dpay(SceneData Scene, uint32_t keys) {
+    camera.GetForwardVector();
+    player.HandleMovement(keys, KEY_LEFT, KEY_DOWN, KEY_UP, KEY_RIGHT);
+    player.HandleRotation(keys, KEY_L, KEY_R);
+    camera.GetLookVector();
+
+    NE_CameraSet(
+        Scene.Camera,
+        camera.camX, camera.camY, camera.camZ,
+        camera.lookX, camera.lookY, camera.lookZ,
+        0, 1, 0
+    );
+
+    NE_ProcessArg(Draw3DScene, &Scene);
+}
+ 
+int main(int argc, char *argv[])
+{
+    SceneData Scene = haeoj();
 
     while (1)
     {
         NE_WaitForVBL((NE_UpdateFlags)0); // Wait for next frame
         NE_ClearColorSet(RGB15(5, 25, 31), 31, 0);
+        oamUpdate(&oamMain);
 
         debug.GetFPS();
 
@@ -65,19 +89,7 @@ int main(int argc, char *argv[])
         scanKeys();
         uint32_t keys = keysHeld();
 
-        camera.GetForwardVector();
-        player.HandleMovement(keys, KEY_LEFT, KEY_DOWN, KEY_UP, KEY_RIGHT);
-        player.HandleRotation(keys, KEY_L, KEY_R);
-        camera.GetLookVector();
-
-        NE_CameraSet(
-            Scene.Camera,
-            camera.camX, camera.camY, camera.camZ,
-            camera.lookX, camera.lookY, camera.lookZ,
-            0, 1, 0
-        );
-
-        NE_ProcessArg(Draw3DScene, &Scene);
+        dpay(Scene, keys);
 
         debug.FramePassed();
         

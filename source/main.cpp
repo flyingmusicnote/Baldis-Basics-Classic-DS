@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
     while (1)
     {
         NE_WaitForVBL((NE_UpdateFlags)0); // Wait for next frame
-        NE_ClearColorSet(RGB15(5, 25, 31), 31, 0);
+        NE_ClearColorSet(RGB15(5, 25, 30), 31, 0);
         oamUpdate(&oamMain);
 
         debug.GetFPS();

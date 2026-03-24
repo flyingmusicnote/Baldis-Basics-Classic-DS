@@ -1,1 +1,0 @@
-#define SFX_SCHOOLHOUSE    0

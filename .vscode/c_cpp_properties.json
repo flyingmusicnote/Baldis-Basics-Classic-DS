@@ -26,7 +26,9 @@
         {
             "name": "Win32",
             "includePath": [
+                "C:\\msys64\\**",
                 "c:/Users/a/Desktop/dsprojects/aaron_engine/**",
+                "E:\\dsprojects\\aaron_engine\\build\\aaron_engine\\**",
                 "C:/msys64/opt/wonderful/thirdparty/blocksds/**",
                 "C:\\msys64\\opt\\wonderful\\thirdparty\\blocksds\\external\\nitro-engine\\include"
             ],

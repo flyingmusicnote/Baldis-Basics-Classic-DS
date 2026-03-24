@@ -1,6 +1,9 @@
 // DS libraries
+#include <stdbool.h>
+#include <stdio.h>
+#include <nds.h>
+
 #include <NEMain.h>
-#include <maxmod9.h>
 
 #include <math.h>
 #include <string>
@@ -16,6 +19,8 @@
 #include "headers/InitElements.h" // Init textures
 
 #include "nintendo.h"
+#include "audio/music/schoolhouse_bin.h"
+#include "audio/sounds/disfelb_nintendo1_bin.h"
 
 // Classes
 player_class player;
@@ -75,10 +80,33 @@ void dpay(SceneData Scene, uint32_t keys) {
  
 int main(int argc, char *argv[])
 {
+    soundEnable();
     SceneData Scene = haeoj();
+    
+    int schoolhouse_music;
+
+    schoolhouse_music = soundPlaySample(schoolhouse_bin, // Pointer to sample
+                        SoundFormat_16Bit,           // Format: Signed 16 bits
+                        schoolhouse_bin_size,         // Size in bytes of the sample
+                        22050, // Frequency in Hz
+                        127,   // Volume: Max
+                        64,    // Panning: Center
+                        true, 
+                        0);    // Loop start point (not used here)
+
+                        soundPlaySample(disfelb_nintendo1_bin, // Pointer to sample
+                        SoundFormat_16Bit,           // Format: Signed 16 bits
+                        disfelb_nintendo1_bin_size,         // Size in bytes of the sample
+                        22050, // Frequency in Hz
+                        127,   // Volume: Max
+                        64,    // Panning: Center
+                        false, 
+                        0);    // Loop start point (not used here)
 
     while (1)
     {
+        
+
         NE_WaitForVBL((NE_UpdateFlags)0); // Wait for next frame
         NE_ClearColorSet(RGB15(5, 25, 30), 31, 0);
         oamUpdate(&oamMain);

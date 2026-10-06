@@ -1,7 +1,10 @@
 # Baldi's Basics ported to the Nintendo DS [unfinished]
 Made possible with Nitro Engine
 
-# This is currently unfinished. As of now it has 3d rendering made of a map file
+# This is currently unfinished. As of now it has 3d rendering made of MapData
+The map data is /source/Mapdata.cpp - it's made using Roblox as putting parts around and then a lua script to turn it into that code. I don't have the .rbxl to give for the git :(
+Im sure it would be easy to decode
+
 To build the files you can run /-build.bat
 There is a current .nds file in the root !
 

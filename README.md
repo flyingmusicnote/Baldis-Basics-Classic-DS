@@ -6,7 +6,6 @@ The map data is /source/Mapdata.cpp - it's made using Roblox as putting parts ar
 Im sure it would be easy to decode
 
 To build the files you can run /-build.bat
-There is a current .nds file in the root !
 
 It runs at a solid 60 fps with only 6% cpu use on the DSi. so good progress. dont know if ill continue this project.
 music plays and theres a baldi voice actor saying "Nintendo!" at the start
